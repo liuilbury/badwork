@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/liulizhang/CLionProjects/CssParser/CSSLex.cpp
+CSSLex.h
+C:/Users/liulizhang/CLionProjects/CssParser/CSSLex.h
+sstream
+-
+fstream
+-
+
+C:/Users/liulizhang/CLionProjects/CssParser/CSSLex.h
+CSSToken.h
+C:/Users/liulizhang/CLionProjects/CssParser/CSSToken.h
+vector
+-
+
+C:/Users/liulizhang/CLionProjects/CssParser/CSSToken.h
+string
+-
+
