@@ -17,6 +17,7 @@ case 'A': case 'B': case 'C': case 'D': case 'E': case 'F': case 'G': \
 case 'H': case 'I': case 'J': case 'K': case 'L': case 'M': case 'N': \
 case 'O': case 'P': case 'Q': case 'R': case 'S': case 'T': /*  'U'*/ \
 case 'V': case 'W': case 'X': case 'Y': case 'Z': case '_'
+#define MATCH_CASE '~': case '|': case '^': case '$': case '*'
 void CSSLex::SetBufferSource(const std::string &fileName)
 {
 	std::ifstream in(fileName);
@@ -36,10 +37,17 @@ void CSSLex::emitToken(CSSToken *token)
 CSSToken *CSSLex::CSSTokenAtkeyword()//ATKEYWORD = '@' ident  = '@' '-'? nmstart nmchar*
 {
 	CSSToken *token = new CSSToken();
-	unsigned char c = NextChar(buffer);
-	if (c == '-' || isNMStart(c))
-	{
-		token->data += c;
+	unsigned char c;
+	if ('-'==(c=NextChar(buffer)))token->data += c;
+	else --pos.forwardPos;
+	if(!isNMStart((c=NextChar(buffer)))){
+        token->data += c;
+        token->data='@'+token->data;
+        token->type=CSS_TOKEN_CHAR;
+        return token;
+	}
+	if(c=='\\'){
+	    token->data+=getEscape();
 	}
 	token->data += getNMChars();
 	token->type = CSS_TOKEN_ATKEYWORD;
@@ -59,7 +67,7 @@ CSSToken *CSSLex::CSSTokenHash()//HASH = '#' name  = '#' nmchar+
 	}
 	return token;
 }
-CSSToken *CSSLex::CSSTokenString()
+CSSToken *CSSLex::CSSTokenString()//string = '"' (stringchar | "'")* '"' | "'" (stringchar | '"')* "'"
 {
 	CSSToken *token = new CSSToken();
 	char c=buffer[pos.forwardPos-1];
@@ -73,17 +81,101 @@ CSSToken *CSSLex::CSSTokenNumberOrPercentageOrDimension()
 //DIMENSION = num ident
 {
 	CSSToken *token = new CSSToken();
-	token->data = getDigits()+buffer[pos.forwardPos];
-	token->type = CSS_TOKEN_NUMBER;
+    char c=buffer[pos.forwardPos-1];
+	token->data = c+getDigits();
+	c=NextChar(buffer);
+	if(c=='.'){
+	    token->data+=c;
+	    c=NextChar(buffer);
+	}
+	if(c=='%'){
+	    token->data+=c;
+        token->type=CSS_TOKEN_PERCENTAGE;
+        return token;
+	}else if(c=='\\'){
+	    token->data+=getEscape();
+	}else{
+	    --pos.forwardPos;
+	}
+	std::string str=getNMChars();
+	if(str.empty()){
+        token->type=CSS_TOKEN_NUMBER;
+	}else {
+        token->data += str;
+        token->type = CSS_TOKEN_DIMENSION;
+    }
 	return token;
 }
-CSSToken *CSSLex::CSSTokenIdentOrFunction()//IDENT = ident = [-]? nmstart nmchar*
+CSSToken *CSSLex::CSSTokenComment()//COMMENT = '/' '*' [^*]* '*'+ ([^/] [^*]* '*'+)* '/'
+{
+    CSSToken *token = new CSSToken();
+    unsigned char c=NextChar(buffer);
+    if(c!='*'){
+        token->data='/';
+        token->type=CSS_TOKEN_CHAR;
+        return token;
+    }
+    unsigned last=NextChar(buffer);
+    while((c=NextChar(buffer))){
+        if(c=='/'&&last=='*')break;
+    }
+    token->type=CSS_TOKEN_COMMENT;
+    return token;
+}
+CSSToken *CSSLex::CSSTokenIdentOrFunction()
+//IDENT = ident = [-]? nmstart nmchar*
+//FUNCTION = ident '(' = [-]? nmstart nmchar* '('
 {
 	CSSToken *token = new CSSToken();
 	char c=buffer[pos.forwardPos-1];
 	token->data = c+getNMChars();
-	token->type = CSS_TOKEN_IDENT;
+	c=NextChar(buffer);
+	if(c=='('){
+        token->data+=c;
+        token->type=CSS_TOKEN_FUNCTION;
+	}else{
+	    --pos.forwardPos;
+        token->type = CSS_TOKEN_IDENT;
+	}
 	return token;
+}
+CSSToken *CSSLex::CSSTokenMatch()
+//INCLUDES       = "~="
+//DASHMATCH      = "|="
+//PREFIXMATCH    = "^="
+//SUFFIXMATCH    = "$="
+//SUBSTRINGMATCH = "*="
+{
+    CSSToken *token = new CSSToken();
+    unsigned char c=NextChar(buffer);
+    if(c!='='){
+        --pos.forwardPos;
+        token->type=CSS_TOKEN_CHAR;
+        return token;
+    }
+    switch (buffer[pos.firstPos]) {
+        case '~':
+            token->type = CSS_TOKEN_INCLUDES;
+            break;
+        case '|':
+            token->type = CSS_TOKEN_DASHMATCH;
+            break;
+        case '^':
+            token->type = CSS_TOKEN_PREFIXMATCH;
+            break;
+        case '$':
+            token->type = CSS_TOKEN_SUFFIXMATCH;
+            break;
+        case '*':
+            token->type = CSS_TOKEN_SUBSTRINGMATCH;
+            break;
+    }
+    token->data=buffer[pos.firstPos]+'=';
+    return token;
+}
+CSSToken *CSSLex::CSSTokenURL()//URI = "url(" w (string | urlchar*) w ')'
+{
+
 }
 CSSToken *CSSLex::CSSTokenURIOrUnicodeRangeOrIdentOrFunction()
 //URI = "url(" w (string | urlchar*) w ')'
@@ -91,7 +183,14 @@ CSSToken *CSSLex::CSSTokenURIOrUnicodeRangeOrIdentOrFunction()
 //IDENT = ident = [-]? nmstart nmchar*
 //FUNCTION = ident '(' = [-]? nmstart nmchar* '('
 {
-	return nullptr;
+    unsigned char c;
+    if('r'==(c=NextChar(buffer))||'R'==c) {
+        return CSSTokenURL();
+    }
+    else if(c=='+'){
+        return CSSTokenUnicodeRange();
+    }
+    return CSSTokenIdentOrFunction();
 }
 CSSToken *CSSLex::GetToken()
 {
@@ -117,11 +216,19 @@ CSSToken *CSSLex::GetToken()
 					break;
 				}
 				case '"':
-				case '\'':
+				case '\''://STRING = string
 				{
 					newToken = CSSTokenString();
 					break;
 				}
+			    case '/':
+                {
+                    newToken=CSSTokenComment();
+                }
+				case 'u':case 'U':
+                {
+                    newToken = CSSTokenURIOrUnicodeRangeOrIdentOrFunction();
+                }
 				case NUMBER_CASE:
 				{
 					newToken = CSSTokenNumberOrPercentageOrDimension();
@@ -132,10 +239,11 @@ CSSToken *CSSLex::GetToken()
 					newToken = CSSTokenIdentOrFunction();
 					break;
 				}
-				case 'u':case 'U':
-				{
-					newToken = CSSTokenURIOrUnicodeRangeOrIdentOrFunction();
-				}
+			    case MATCH_CASE:
+                {
+                    newToken = CSSTokenIdentOrFunction();
+                    break;
+                }
 				case WS_CASE:
 				{
 

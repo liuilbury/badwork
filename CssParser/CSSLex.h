@@ -80,33 +80,25 @@ class CSSLex
 	std::vector<CSSToken>tokenCache;
 	std::string getNMChars();
 	unsigned char getEscape();
-	CSSToken *
-	CSSTokenHash();
-	void
-	emitToken(CSSToken *token);
-	CSSToken *
-	CSSTokenAtkeyword();
+	CSSToken * CSSTokenHash();
+	void emitToken(CSSToken *token);
+	CSSToken * CSSTokenAtkeyword();
+	CSSToken * CSSTokenString();
+	std::string getString();
+	std::string getStringChars();
+	static bool isStringChar(uint8_t c);
+	static bool isURLChar(uint8_t c);
+	CSSToken *CSSTokenNumberOrPercentageOrDimension();
+	std::string getDigits();
+	static bool isDigit(unsigned char c);
+	CSSToken *CSSTokenIdentOrFunction();
+	CSSToken *CSSTokenURIOrUnicodeRangeOrIdentOrFunction();
 
-	CSSToken *
-	CSSTokenString();
-	std::string
-	getString();
-	std::string
-	getStringChars();
-	static bool
-	isStringChar(uint8_t c);
-	static bool
-	isURLChar(uint8_t c);
-	CSSToken *
-	CSSTokenNumberOrPercentageOrDimension();
-	std::string
-	getDigits();
-	static bool
-	isDigit(unsigned char c);
-	CSSToken *
-	CSSTokenIdentOrFunction();
-	CSSToken *
-	CSSTokenURIOrUnicodeRangeOrIdentOrFunction();
+    CSSToken *CSSTokenURL();
+
+    CSSToken *CSSTokenComment();
+
+    CSSToken *CSSTokenMatch();
 };
 #define IDENT_START_SIGN    '-'
 #define UNDER_LINE_SIGN     '_'

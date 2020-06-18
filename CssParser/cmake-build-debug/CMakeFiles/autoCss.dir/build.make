@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.1\bin\cmake\win\bin\cmake.exe" -E re
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\liulizhang\CLionProjects\CssParser
+CMAKE_SOURCE_DIR = F:\badwork-master\CssParser
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\liulizhang\CLionProjects\CssParser\cmake-build-debug
+CMAKE_BINARY_DIR = F:\badwork-master\CssParser\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/autoCss.dir/depend.make
@@ -58,68 +58,68 @@ include CMakeFiles/autoCss.dir/flags.make
 
 CMakeFiles/autoCss.dir/main.cpp.obj: CMakeFiles/autoCss.dir/flags.make
 CMakeFiles/autoCss.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\liulizhang\CLionProjects\CssParser\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/autoCss.dir/main.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\autoCss.dir\main.cpp.obj -c C:\Users\liulizhang\CLionProjects\CssParser\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\badwork-master\CssParser\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/autoCss.dir/main.cpp.obj"
+	F:\mingw\mingw64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\autoCss.dir\main.cpp.obj -c F:\badwork-master\CssParser\main.cpp
 
 CMakeFiles/autoCss.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoCss.dir/main.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\liulizhang\CLionProjects\CssParser\main.cpp > CMakeFiles\autoCss.dir\main.cpp.i
+	F:\mingw\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\badwork-master\CssParser\main.cpp > CMakeFiles\autoCss.dir\main.cpp.i
 
 CMakeFiles/autoCss.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoCss.dir/main.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\liulizhang\CLionProjects\CssParser\main.cpp -o CMakeFiles\autoCss.dir\main.cpp.s
+	F:\mingw\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\badwork-master\CssParser\main.cpp -o CMakeFiles\autoCss.dir\main.cpp.s
 
 CMakeFiles/autoCss.dir/CSSLex.cpp.obj: CMakeFiles/autoCss.dir/flags.make
 CMakeFiles/autoCss.dir/CSSLex.cpp.obj: ../CSSLex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\liulizhang\CLionProjects\CssParser\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/autoCss.dir/CSSLex.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\autoCss.dir\CSSLex.cpp.obj -c C:\Users\liulizhang\CLionProjects\CssParser\CSSLex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\badwork-master\CssParser\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/autoCss.dir/CSSLex.cpp.obj"
+	F:\mingw\mingw64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\autoCss.dir\CSSLex.cpp.obj -c F:\badwork-master\CssParser\CSSLex.cpp
 
 CMakeFiles/autoCss.dir/CSSLex.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoCss.dir/CSSLex.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\liulizhang\CLionProjects\CssParser\CSSLex.cpp > CMakeFiles\autoCss.dir\CSSLex.cpp.i
+	F:\mingw\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\badwork-master\CssParser\CSSLex.cpp > CMakeFiles\autoCss.dir\CSSLex.cpp.i
 
 CMakeFiles/autoCss.dir/CSSLex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoCss.dir/CSSLex.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\liulizhang\CLionProjects\CssParser\CSSLex.cpp -o CMakeFiles\autoCss.dir\CSSLex.cpp.s
+	F:\mingw\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\badwork-master\CssParser\CSSLex.cpp -o CMakeFiles\autoCss.dir\CSSLex.cpp.s
 
 CMakeFiles/autoCss.dir/error.cpp.obj: CMakeFiles/autoCss.dir/flags.make
 CMakeFiles/autoCss.dir/error.cpp.obj: ../error.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\liulizhang\CLionProjects\CssParser\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/autoCss.dir/error.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\autoCss.dir\error.cpp.obj -c C:\Users\liulizhang\CLionProjects\CssParser\error.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\badwork-master\CssParser\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/autoCss.dir/error.cpp.obj"
+	F:\mingw\mingw64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\autoCss.dir\error.cpp.obj -c F:\badwork-master\CssParser\error.cpp
 
 CMakeFiles/autoCss.dir/error.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoCss.dir/error.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\liulizhang\CLionProjects\CssParser\error.cpp > CMakeFiles\autoCss.dir\error.cpp.i
+	F:\mingw\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\badwork-master\CssParser\error.cpp > CMakeFiles\autoCss.dir\error.cpp.i
 
 CMakeFiles/autoCss.dir/error.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoCss.dir/error.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\liulizhang\CLionProjects\CssParser\error.cpp -o CMakeFiles\autoCss.dir\error.cpp.s
+	F:\mingw\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\badwork-master\CssParser\error.cpp -o CMakeFiles\autoCss.dir\error.cpp.s
 
 CMakeFiles/autoCss.dir/CSSParse.cpp.obj: CMakeFiles/autoCss.dir/flags.make
 CMakeFiles/autoCss.dir/CSSParse.cpp.obj: ../CSSParse.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\liulizhang\CLionProjects\CssParser\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/autoCss.dir/CSSParse.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\autoCss.dir\CSSParse.cpp.obj -c C:\Users\liulizhang\CLionProjects\CssParser\CSSParse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\badwork-master\CssParser\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/autoCss.dir/CSSParse.cpp.obj"
+	F:\mingw\mingw64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\autoCss.dir\CSSParse.cpp.obj -c F:\badwork-master\CssParser\CSSParse.cpp
 
 CMakeFiles/autoCss.dir/CSSParse.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoCss.dir/CSSParse.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\liulizhang\CLionProjects\CssParser\CSSParse.cpp > CMakeFiles\autoCss.dir\CSSParse.cpp.i
+	F:\mingw\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\badwork-master\CssParser\CSSParse.cpp > CMakeFiles\autoCss.dir\CSSParse.cpp.i
 
 CMakeFiles/autoCss.dir/CSSParse.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoCss.dir/CSSParse.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\liulizhang\CLionProjects\CssParser\CSSParse.cpp -o CMakeFiles\autoCss.dir\CSSParse.cpp.s
+	F:\mingw\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\badwork-master\CssParser\CSSParse.cpp -o CMakeFiles\autoCss.dir\CSSParse.cpp.s
 
 CMakeFiles/autoCss.dir/CSSToken.cpp.obj: CMakeFiles/autoCss.dir/flags.make
 CMakeFiles/autoCss.dir/CSSToken.cpp.obj: ../CSSToken.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\liulizhang\CLionProjects\CssParser\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/autoCss.dir/CSSToken.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\autoCss.dir\CSSToken.cpp.obj -c C:\Users\liulizhang\CLionProjects\CssParser\CSSToken.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\badwork-master\CssParser\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/autoCss.dir/CSSToken.cpp.obj"
+	F:\mingw\mingw64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\autoCss.dir\CSSToken.cpp.obj -c F:\badwork-master\CssParser\CSSToken.cpp
 
 CMakeFiles/autoCss.dir/CSSToken.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoCss.dir/CSSToken.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\liulizhang\CLionProjects\CssParser\CSSToken.cpp > CMakeFiles\autoCss.dir\CSSToken.cpp.i
+	F:\mingw\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\badwork-master\CssParser\CSSToken.cpp > CMakeFiles\autoCss.dir\CSSToken.cpp.i
 
 CMakeFiles/autoCss.dir/CSSToken.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoCss.dir/CSSToken.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\liulizhang\CLionProjects\CssParser\CSSToken.cpp -o CMakeFiles\autoCss.dir\CSSToken.cpp.s
+	F:\mingw\mingw64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\badwork-master\CssParser\CSSToken.cpp -o CMakeFiles\autoCss.dir\CSSToken.cpp.s
 
 # Object files for target autoCss
 autoCss_OBJECTS = \
@@ -141,7 +141,7 @@ autoCss.exe: CMakeFiles/autoCss.dir/build.make
 autoCss.exe: CMakeFiles/autoCss.dir/linklibs.rsp
 autoCss.exe: CMakeFiles/autoCss.dir/objects1.rsp
 autoCss.exe: CMakeFiles/autoCss.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\liulizhang\CLionProjects\CssParser\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable autoCss.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\badwork-master\CssParser\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable autoCss.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\autoCss.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -154,6 +154,6 @@ CMakeFiles/autoCss.dir/clean:
 .PHONY : CMakeFiles/autoCss.dir/clean
 
 CMakeFiles/autoCss.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\liulizhang\CLionProjects\CssParser C:\Users\liulizhang\CLionProjects\CssParser C:\Users\liulizhang\CLionProjects\CssParser\cmake-build-debug C:\Users\liulizhang\CLionProjects\CssParser\cmake-build-debug C:\Users\liulizhang\CLionProjects\CssParser\cmake-build-debug\CMakeFiles\autoCss.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" F:\badwork-master\CssParser F:\badwork-master\CssParser F:\badwork-master\CssParser\cmake-build-debug F:\badwork-master\CssParser\cmake-build-debug F:\badwork-master\CssParser\cmake-build-debug\CMakeFiles\autoCss.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/autoCss.dir/depend
 

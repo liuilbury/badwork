@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/liulizhang/CLionProjects/CssParser/CSSLex.cpp" "C:/Users/liulizhang/CLionProjects/CssParser/cmake-build-debug/CMakeFiles/autoCss.dir/CSSLex.cpp.obj"
-  "C:/Users/liulizhang/CLionProjects/CssParser/CSSParse.cpp" "C:/Users/liulizhang/CLionProjects/CssParser/cmake-build-debug/CMakeFiles/autoCss.dir/CSSParse.cpp.obj"
-  "C:/Users/liulizhang/CLionProjects/CssParser/CSSToken.cpp" "C:/Users/liulizhang/CLionProjects/CssParser/cmake-build-debug/CMakeFiles/autoCss.dir/CSSToken.cpp.obj"
-  "C:/Users/liulizhang/CLionProjects/CssParser/error.cpp" "C:/Users/liulizhang/CLionProjects/CssParser/cmake-build-debug/CMakeFiles/autoCss.dir/error.cpp.obj"
-  "C:/Users/liulizhang/CLionProjects/CssParser/main.cpp" "C:/Users/liulizhang/CLionProjects/CssParser/cmake-build-debug/CMakeFiles/autoCss.dir/main.cpp.obj"
+  "F:/badwork-master/CssParser/CSSLex.cpp" "F:/badwork-master/CssParser/cmake-build-debug/CMakeFiles/autoCss.dir/CSSLex.cpp.obj"
+  "F:/badwork-master/CssParser/CSSParse.cpp" "F:/badwork-master/CssParser/cmake-build-debug/CMakeFiles/autoCss.dir/CSSParse.cpp.obj"
+  "F:/badwork-master/CssParser/CSSToken.cpp" "F:/badwork-master/CssParser/cmake-build-debug/CMakeFiles/autoCss.dir/CSSToken.cpp.obj"
+  "F:/badwork-master/CssParser/error.cpp" "F:/badwork-master/CssParser/cmake-build-debug/CMakeFiles/autoCss.dir/error.cpp.obj"
+  "F:/badwork-master/CssParser/main.cpp" "F:/badwork-master/CssParser/cmake-build-debug/CMakeFiles/autoCss.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
